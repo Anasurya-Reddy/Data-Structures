@@ -1,20 +1,20 @@
-/*C Program that implements Selection Sort */
+/*C Program to perform Selection Sort */
 #include<stdio.h>
-void selectionsort (int[], int);
-void main()
+void selectionsort (int *, int);
+int main()
 {
-    int a[50], i, n;
-    printf("Enter n:");
+    int a[20], i, n;
+    printf("Enter the size of list:");
     scanf("%d", &n);
-    printf("Enter array elements:");
+    printf("Enter the elements:\n");
     for(i=0; i<n; i++)
         scanf("%d", &a[i]);
     selectionsort(a,n);
-    printf("Sorted list\n");
+    printf("Sorted list:\n");
     for(i=0; i<n; i++)
-        printf("%5d", a[i]);
+        printf("%d ", a[i]);
 }
-void selectionsort(int a[], int n)
+void selectionsort(int *a, int n)
 {
     int i, j, temp, minpos;
     for(i=0; i<=(n-2); i++)

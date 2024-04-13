@@ -1,12 +1,12 @@
 /*C Program to perform Linear Search*/
 #include<stdio.h>
-int linearsearch(int [], int, int);
+int linearsearch(int *, int, int);
 int main()
 {
     int a[20], i, n, key, pos;
-    printf("Enter n:");
+    printf("Enter the size of list:");
     scanf("%d",&n);
-    printf("Enter %d elements:\n",n);
+    printf("Enter the elementsinto the list:\n");
     for(i=0; i<n; i++)
         scanf("%d",&a[i]);
     printf("Enter the element to be searched:");
@@ -18,7 +18,7 @@ int main()
         printf("Key is found at index: %d",pos);
     return 0;
 }
-int linearsearch(int a[], int n, int key)
+int linearsearch(int *a, int n, int key)
 {
     int i;
     for(i=0; i<n; i++)

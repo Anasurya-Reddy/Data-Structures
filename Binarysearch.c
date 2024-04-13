@@ -1,33 +1,44 @@
-/* Binary search using recursive function */
-#include<stdio.h>
-int binarysearch(int, int);
-int a[20], key;
-int main() {
-    int i, n, pos;
-    printf("enter n:");
+#include <stdio.h>
+void search(int *,int ,int );
+int main()
+{
+    int a[20],n,i,key;
+    printf("Enter the list size:");
     scanf("%d",&n);
-    printf("enter n elements\n");
-    for(i=0; i<n; i++)
+    printf("Enter the elements in the list:");
+    for(i=0;i<n;i++)
+    {
         scanf("%d",&a[i]);
-    printf("enter key:");
+    }
+    printf("Enter the element to be searched:");
     scanf("%d",&key);
-    pos = binarysearch(0, n-1);
-    if(pos==-1)
-        printf("search unsuccessful");
-    else
-        printf("Key is found at the index:%d",pos);
+    search(a,n,key);
     return 0;
 }
-int binarysearch (int low, int high)
+
+void search(int a[],int n,int key)
 {
-    int mid;
-    if(low>high) 
-        return(-1);
-    mid=(low+high)/2;
-    if(key==a[mid]) 
-        return(mid);
-    else if(key<a[mid]) 
-        return(bsearch(low,mid-1));
-    else 
-        return(bsearch(mid+1,high));
+    int low,mid,high,count=0;
+    low=0;
+    high=n-1;
+    while(low<=high)
+    {
+        mid=(low+high)/2;
+        if(key==a[mid])
+        {
+            printf("Search is succesful,Key is found at index %d",mid);
+            count=1;
+            break;
+        }
+        else if(key<mid)
+        {
+            high=mid-1;
+        }
+        else
+        {
+            low=mid+1;
+        }
+    }
+    if(count==0)
+        printf("Search is unsuccesful");
 }

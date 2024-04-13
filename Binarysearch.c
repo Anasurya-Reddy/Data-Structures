@@ -16,7 +16,7 @@ int main()
     return 0;
 }
 
-void search(int a[],int n,int key)
+void search(int *a,int n,int key)
 {
     int low,mid,high,count=0;
     low=0;

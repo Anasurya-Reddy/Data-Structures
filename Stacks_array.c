@@ -1,3 +1,4 @@
+/*C program to perform operations on Stacks using Arrays*/
 #include<stdio.h>
 #include<stdlib.h>
 #define MAX 5

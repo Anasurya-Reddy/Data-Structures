@@ -1,3 +1,4 @@
+/*C program to perform operations on Circulae Queues*/
 #include<stdio.h>
 #include<stdlib.h>
 #define MAX 5

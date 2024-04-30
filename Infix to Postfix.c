@@ -1,5 +1,6 @@
 /*C programe to convert Infix expression to Postfix Expression*/
 #include<stdio.h>
+#include<stdlib.h>
 #include<ctype.h>
 #define MAX 20
 char stack[MAX];
@@ -13,7 +14,7 @@ char pop()
 {
     char ch;
     if(top==-1)
-        return -1;
+        exit(0);
     else
     {
         ch=stack[top];

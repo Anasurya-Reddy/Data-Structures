@@ -69,7 +69,10 @@ void display()
 	if(front==-1)
 		printf("Queue is Empty\n");
 	else
+	{
+		printf("Queue Contents:\n");
 		for(i=front;i<=rear;i++)
 			printf("%d ",queue[i]);
-	printf("\n");
+		printf("\n");
+	}
 }

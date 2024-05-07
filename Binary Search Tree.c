@@ -24,7 +24,7 @@ int main()
 	int item,ch;
 	while(1)
 	{
-		printf("\nMENU\n");
+		printf("\n-----------------MENU-----------------\n");
 		printf("1.Insert\n2.Inorder Traversal\n3.Preorder Traversal\n4.Postorder Traversal\n5.Search\n6.Heigth of Tree\n7.Count Nodes\n8.No.of Edges\n9.Exit\n");
 		printf("Enter your choice:");
 		scanf("%d",&ch);

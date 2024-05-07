@@ -141,7 +141,6 @@ int height(NODE *root)
 
 int count(NODE *root)
 {
-	int r;
 	if(root==NULL)
 		return 0;
 	else
